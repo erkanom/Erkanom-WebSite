@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
+
+import 'package:mysite/views/whoAmI.dart';
 
 class CustomAppBar extends StatelessWidget {
   @override
@@ -43,7 +46,9 @@ class CustomAppBar extends StatelessWidget {
                               "About",
                               style: TextStyle(fontSize: 16),
                             ),
-                            onPressed: () => {},
+                            onPressed: () => {
+                              WhoAmI().aboutButton(),
+                            },
                           ),
                           FlatButton(
                             textColor: Colors.white,
@@ -51,7 +56,9 @@ class CustomAppBar extends StatelessWidget {
                               "Resume",
                               style: TextStyle(fontSize: 16),
                             ),
-                            onPressed: () => {},
+                            onPressed: () => {
+                              WhoAmI().resumeButton(),
+                            },
                           ),
                           FlatButton(
                             textColor: Colors.white,
@@ -59,7 +66,9 @@ class CustomAppBar extends StatelessWidget {
                               "Projects",
                               style: TextStyle(fontSize: 16),
                             ),
-                            onPressed: () => {},
+                            onPressed: () => {
+                              WhoAmI().projectButton(),
+                            },
                           ),
                           FlatButton(
                             textColor: Colors.white,
