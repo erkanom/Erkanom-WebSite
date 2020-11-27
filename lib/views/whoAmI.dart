@@ -26,6 +26,7 @@ class WhoAmI extends StatelessWidget {
                 ),
                 Container(
                   height: _contentHeight,
+                  color: Colors.purple,
                 ),
                 Container(
                   height: _contentHeight,
