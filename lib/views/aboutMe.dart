@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'dart:html' as html;
 
 class AboutMe extends StatefulWidget {
   @override
@@ -14,7 +15,7 @@ class _AboutMeState extends State<AboutMe> with TickerProviderStateMixin {
       child: Column(
         children: [
           SizedBox(
-            height: 250,
+            height: 200,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -61,6 +62,49 @@ class _AboutMeState extends State<AboutMe> with TickerProviderStateMixin {
               ),
             ],
           ),
+          //Bundan uzeri animasyona ait ellesme pek
+          SizedBox(
+            height: 30,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              GestureDetector(
+                child: CircleAvatar(
+                  backgroundColor: Colors.black,
+                  radius: 30,
+                  backgroundImage: new AssetImage("images/github.png"),
+                ),
+                onTap: () =>
+                    html.window.location.href = "https://github.com/erkanom",
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              GestureDetector(
+                child: CircleAvatar(
+                  backgroundColor: Colors.black,
+                  radius: 30,
+                  backgroundImage: new AssetImage("images/linkedin.png"),
+                ),
+                onTap: null,
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              GestureDetector(
+                child: CircleAvatar(
+                  backgroundColor: Colors.black,
+                  radius: 30,
+                  backgroundImage: new AssetImage("images/twitter.png"),
+                ),
+                onTap: null,
+              ),
+              SizedBox(
+                width: 20,
+              ),
+            ],
+          )
         ],
       ),
     );
