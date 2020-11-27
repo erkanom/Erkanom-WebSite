@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:html' as html;
 
 class CustomAppBar extends StatelessWidget {
   @override
@@ -12,61 +13,68 @@ class CustomAppBar extends StatelessWidget {
             child: Container(
               width: 1140,
               color: Colors.black,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Row(
+              child: Center(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      CircleAvatar(
-                        radius: 40,
-                        backgroundImage: new AssetImage("images/profile.jpeg"),
+                      Row(
+                        children: [
+                          CircleAvatar(
+                            radius: 40,
+                            backgroundImage:
+                                new AssetImage("images/profile.jpeg"),
+                          ),
+                          SizedBox(
+                            width: 30,
+                          ),
+                          Text(
+                            "/home/ÖMER_ERKAN",
+                            style: TextStyle(color: Colors.white, fontSize: 22),
+                          ),
+                        ],
                       ),
-                      SizedBox(
-                        width: 30,
-                      ),
-                      Text(
-                        "/home/ÖMER_ERKAN",
-                        style: TextStyle(color: Colors.white, fontSize: 22),
-                      ),
+                      Row(
+                        children: [
+                          FlatButton(
+                            textColor: Colors.white,
+                            child: Text(
+                              "About",
+                              style: TextStyle(fontSize: 16),
+                            ),
+                            onPressed: () => {},
+                          ),
+                          FlatButton(
+                            textColor: Colors.white,
+                            child: Text(
+                              "Resume",
+                              style: TextStyle(fontSize: 16),
+                            ),
+                            onPressed: () => {},
+                          ),
+                          FlatButton(
+                            textColor: Colors.white,
+                            child: Text(
+                              "Projects",
+                              style: TextStyle(fontSize: 16),
+                            ),
+                            onPressed: () => {},
+                          ),
+                          FlatButton(
+                            textColor: Colors.white,
+                            child: Text(
+                              "Blog",
+                              style: TextStyle(fontSize: 16),
+                            ),
+                            onPressed: () => html.window.location.href =
+                                "https://medium.com/@oerkan.dev",
+                          ),
+                        ],
+                      )
                     ],
                   ),
-                  Row(
-                    children: [
-                      FlatButton(
-                        textColor: Colors.white,
-                        child: Text(
-                          "About",
-                          style: TextStyle(fontSize: 16),
-                        ),
-                        onPressed: () => {},
-                      ),
-                      FlatButton(
-                        textColor: Colors.white,
-                        child: Text(
-                          "Resume",
-                          style: TextStyle(fontSize: 16),
-                        ),
-                        onPressed: () => {},
-                      ),
-                      FlatButton(
-                        textColor: Colors.white,
-                        child: Text(
-                          "Projects",
-                          style: TextStyle(fontSize: 16),
-                        ),
-                        onPressed: () => {},
-                      ),
-                      FlatButton(
-                        textColor: Colors.white,
-                        child: Text(
-                          "Blog",
-                          style: TextStyle(fontSize: 16),
-                        ),
-                        onPressed: () => {},
-                      ),
-                    ],
-                  )
-                ],
+                ),
               ),
             ),
           )),

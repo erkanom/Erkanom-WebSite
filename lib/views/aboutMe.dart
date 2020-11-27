@@ -87,7 +87,8 @@ class _AboutMeState extends State<AboutMe> with TickerProviderStateMixin {
                   radius: 30,
                   backgroundImage: new AssetImage("images/linkedin.png"),
                 ),
-                onTap: null,
+                onTap: () => html.window.location.href =
+                    "https://www.linkedin.com/in/%C3%B6mererkan/",
               ),
               SizedBox(
                 width: 10,
@@ -98,7 +99,17 @@ class _AboutMeState extends State<AboutMe> with TickerProviderStateMixin {
                   radius: 30,
                   backgroundImage: new AssetImage("images/twitter.png"),
                 ),
-                onTap: null,
+                onTap: () =>
+                    html.window.location.href = "https://twitter.com/erkanom",
+              ),
+              GestureDetector(
+                child: CircleAvatar(
+                  backgroundColor: Colors.black,
+                  radius: 30,
+                  backgroundImage: new AssetImage("images/medium-new.png"),
+                ),
+                onTap: () => html.window.location.href =
+                    "https://medium.com/@oerkan.dev",
               ),
               SizedBox(
                 width: 20,
