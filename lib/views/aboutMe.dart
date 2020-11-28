@@ -101,7 +101,7 @@ class _AboutMeState extends State<AboutMe> with TickerProviderStateMixin {
                   backgroundImage: new AssetImage("images/twitter.png"),
                 ),
                 onTap: () =>
-                    html.window.location.href = "https://twitter.com/erkanom",
+                    html.window.location.href = "https://twitter.com/erknaom",
               ),
               GestureDetector(
                 child: CircleAvatar(
