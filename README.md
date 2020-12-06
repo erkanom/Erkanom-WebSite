@@ -1,6 +1,6 @@
-# mysite
+# Erkanom
 
-A new Flutter project.
+A new perspective-Flutter project.
 
 ## Getting Started
 
