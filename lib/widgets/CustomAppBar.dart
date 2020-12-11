@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mysite/views/projects.dart';
+import 'package:mysite/views/resume.dart';
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
 
@@ -47,17 +49,11 @@ class CustomAppBar extends StatelessWidget {
                               style: TextStyle(fontSize: 16),
                             ),
                             onPressed: () => {
-                              WhoAmI().aboutButton(),
-                            },
-                          ),
-                          FlatButton(
-                            textColor: Colors.white,
-                            child: Text(
-                              "Resume",
-                              style: TextStyle(fontSize: 16),
-                            ),
-                            onPressed: () => {
-                              WhoAmI().resumeButton(),
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => About()),
+                              ),
                             },
                           ),
                           FlatButton(
@@ -67,7 +63,11 @@ class CustomAppBar extends StatelessWidget {
                               style: TextStyle(fontSize: 16),
                             ),
                             onPressed: () => {
-                              WhoAmI().projectButton(),
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Projects()),
+                              ),
                             },
                           ),
                           FlatButton(

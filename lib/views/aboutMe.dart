@@ -16,13 +16,38 @@ class _AboutMeState extends State<AboutMe> with TickerProviderStateMixin {
       child: Column(
         children: [
           SizedBox(
-            height: 200,
+            height: 250,
+          ),
+          Container(
+            height: 50,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "./",
+                  style: TextStyle(
+                    color: Colors.orange,
+                    fontSize: 40,
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(top: 10),
+                  child: Text(
+                    "WhoAmI",
+                    style: TextStyle(
+                      color: Colors.orange,
+                      fontSize: 30,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                height: 50,
+                height: 60,
                 child: Center(
                   child: Text(
                     "I am a ",
@@ -116,7 +141,17 @@ class _AboutMeState extends State<AboutMe> with TickerProviderStateMixin {
                 width: 20,
               ),
             ],
-          )
+          ),
+          //   Expanded(
+          // child: Align(
+          // alignment: Alignment.bottomCenter,
+          // child: FloatingActionButton(
+          // backgroundColor: Colors.black,
+          //  child: Icon(Icons.arrow_downward_outlined),
+          // onPressed: () {},
+          //  ),
+          //  ),
+          // )
         ],
       ),
     );
