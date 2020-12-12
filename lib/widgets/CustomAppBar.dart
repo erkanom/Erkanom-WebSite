@@ -4,8 +4,6 @@ import 'package:mysite/views/resume.dart';
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
 
-import 'package:mysite/views/whoAmI.dart';
-
 class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
